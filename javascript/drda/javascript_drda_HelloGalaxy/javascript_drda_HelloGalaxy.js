@@ -46,7 +46,7 @@ function City (name, population, longitude, latitude, countryCode) {
 	this.latitude = latitude;
 	this.countryCode = countryCode;
 }
-
+  
 City.prototype.toString = function toString() {
 	return "city: " + this.name + "  \tpopulation: " + this.population + "\tlongitude: " + this.longitude + 
 	"\tlatitude: " + this.latitude  +  "\tcode: " + this.countryCode;
