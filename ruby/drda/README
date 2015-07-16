@@ -1,0 +1,25 @@
+Examples for ruby_DRDA.
+
+This is a basic example of running simple database operations with ibm_db
+
+These examples were ran in static page with little formatting.
+
+rails new ruby_rails_drda_HelloWorld --database=ibm_db
+http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.swg.im.dbclient.ruby.doc/doc/t0052768.html?lang=en
+Verify gem ibm_db in gemfile
+
+For windows system that I tested on, needed to change in app/views/layouts/application.html.erb 'application' in tags to 'default' in order to prevent errors when opening pages on server
+
+Note that require 'ibm_db'  is placed in app/controllers/application_controller.rb, not helper file
+
+I did not modify database.yml since all connection info and calls to ibm_db were done with application_helper.rb
+Documentation listed above gives examples of modifying database.yml file
+
+Note that scaffolding with migrate:db did not work properly.  During the migration, a query was
+sent to database server that had bad syntax.  I am unsure whether this is always an issue using ibm_db or 
+possibly just with the current ruby/rails versions.  Due to this issue all access to database is
+performed within application_helper.rb.
+
+A good example of how to create and push your application to bluemix is given at
+http://www.ibm.com/developerworks/cloud/library/cl-blograils-app/
+

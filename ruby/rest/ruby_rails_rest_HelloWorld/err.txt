@@ -1,0 +1,189 @@
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:46: [BUG] Segmentation fault
+ruby 2.1.5p273 (2014-11-13 revision 48405) [i386-mingw32]
+
+-- Control frame information -----------------------------------------------
+c:0009 p:---- s:0045 e:000044 CFUNC  :CertOpenSystemStoreA
+c:0008 p:0031 s:0040 e:000039 METHOD C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:46
+c:0007 p:0008 s:0031 e:000029 METHOD C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:33
+c:0006 p:0056 s:0027 e:000026 METHOD C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:322
+c:0005 p:0405 s:0023 e:000020 METHOD C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:156 [FINISH]
+c:0004 p:---- s:0016 e:000015 CFUNC  :new
+c:0003 p:0009 s:0012 e:000011 METHOD C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:41
+c:0002 p:0078 s:0007 E:001188 EVAL   testREST.rb:32 [FINISH]
+c:0001 p:0000 s:0002 E:001ecc TOP    [FINISH]
+
+testREST.rb:32:in `<main>'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:41:in `execute'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:41:in `new'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:156:in `initialize'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb:322:in `default_ssl_cert_store'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:33:in `instance'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:46:in `load_certs'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb:46:in `CertOpenSystemStoreA'
+
+-- C level backtrace information -------------------------------------------
+C:\windows\SysWOW64\ntdll.dll(ZwWaitForSingleObject+0x15) [0x779CF8CD]
+C:\windows\syswow64\kernel32.dll(WaitForSingleObjectEx+0x43) [0x75C81194]
+C:\windows\syswow64\kernel32.dll(WaitForSingleObject+0x12) [0x75C81148]
+C:\RailsInstaller\Ruby2.1.0\bin\msvcrt-ruby210.dll(rb_vm_bugreport+0xa7) [0x6D394A17]
+C:\RailsInstaller\Ruby2.1.0\bin\msvcrt-ruby210.dll(rb_name_err_mesg_new+0x69f) [0x6D248F7F]
+C:\RailsInstaller\Ruby2.1.0\bin\msvcrt-ruby210.dll(rb_bug+0x2e) [0x6D249D5E]
+C:\RailsInstaller\Ruby2.1.0\bin\msvcrt-ruby210.dll(rb_check_safe_str+0x34b) [0x6D31486B]
+ [0x00401866]
+C:\windows\SysWOW64\ntdll.dll(RtlKnownExceptionFilter+0xb7) [0x77A21CA7]
+
+-- Other runtime information -----------------------------------------------
+
+* Loaded script: testREST.rb
+
+* Loaded features:
+
+    0 enumerator.so
+    1 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/encdb.so
+    2 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/iso_8859_1.so
+    3 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/trans/transdb.so
+    4 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/rbconfig.rb
+    5 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/compatibility.rb
+    6 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/defaults.rb
+    7 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/deprecate.rb
+    8 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/errors.rb
+    9 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/version.rb
+   10 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/requirement.rb
+   11 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/platform.rb
+   12 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/basic_specification.rb
+   13 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/stub_specification.rb
+   14 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/util/stringio.rb
+   15 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/specification.rb
+   16 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/exceptions.rb
+   17 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/defaults/operating_system.rb
+   18 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/core_ext/kernel_gem.rb
+   19 thread.rb
+   20 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/thread.so
+   21 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/monitor.rb
+   22 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb
+   23 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems.rb
+   24 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/path_support.rb
+   25 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/rubygems/dependency.rb
+   26 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/socket.so
+   27 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/socket.rb
+   28 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/timeout.rb
+   29 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/protocol.rb
+   30 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/common.rb
+   31 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/generic.rb
+   32 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/ftp.rb
+   33 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/http.rb
+   34 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/https.rb
+   35 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/ldap.rb
+   36 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/ldaps.rb
+   37 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri/mailto.rb
+   38 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/uri.rb
+   39 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/zlib.so
+   40 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/stringio.so
+   41 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/exceptions.rb
+   42 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/header.rb
+   43 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/generic_request.rb
+   44 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/request.rb
+   45 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/requests.rb
+   46 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/response.rb
+   47 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/responses.rb
+   48 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/proxy_delta.rb
+   49 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http/backward.rb
+   50 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/net/http.rb
+   51 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/digest.so
+   52 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/digest.rb
+   53 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/openssl.so
+   54 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/bn.rb
+   55 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/cipher.rb
+   56 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/config.rb
+   57 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/digest.rb
+   58 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/x509.rb
+   59 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/buffering.rb
+   60 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/fcntl.so
+   61 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl/ssl.rb
+   62 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/openssl.rb
+   63 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/version.rb
+   64 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/platform.rb
+   65 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/exceptions.rb
+   66 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/delegate.rb
+   67 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/etc.so
+   68 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/fileutils.rb
+   69 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/tmpdir.rb
+   70 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/tempfile.rb
+   71 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/logger.rb
+   72 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types/logger.rb
+   73 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types/deprecations.rb
+   74 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/type.rb
+   75 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types/cache.rb
+   76 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types/loader_path.rb
+   77 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types/loader.rb
+   78 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib/json/version.rb
+   79 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/ostruct.rb
+   80 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib/json/generic_object.rb
+   81 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib/json/common.rb
+   82 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/utf_16be.so
+   83 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/utf_16le.so
+   84 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/utf_32be.so
+   85 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/enc/utf_32le.so
+   86 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/extensions/x86-mingw32/2.1.0/json-1.8.3/json/ext/parser.so
+   87 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/extensions/x86-mingw32/2.1.0/json-1.8.3/json/ext/generator.so
+   88 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib/json/ext.rb
+   89 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib/json.rb
+   90 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/mime-types-2.6.1/lib/mime/types.rb
+   91 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/cgi/core.rb
+   92 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/cgi/util.rb
+   93 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/cgi/cookie.rb
+   94 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/cgi.rb
+   95 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/netrc-0.10.3/lib/netrc.rb
+   96 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/set.rb
+   97 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/request.rb
+   98 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/http-cookie-1.0.2/lib/http/cookie/version.rb
+   99 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/i386-mingw32/date_core.so
+  100 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/date/format.rb
+  101 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/date.rb
+  102 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/time.rb
+  103 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/domain_name-0.5.24/lib/domain_name/version.rb
+  104 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/domain_name-0.5.24/lib/domain_name/punycode.rb
+  105 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/domain_name-0.5.24/lib/domain_name/etld_data.rb
+  106 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/unf-0.1.4/lib/unf/version.rb
+  107 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/unf-0.1.4/lib/unf.rb
+  108 C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/ipaddr.rb
+  109 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/domain_name-0.5.24/lib/domain_name.rb
+  110 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/http-cookie-1.0.2/lib/http/cookie/ruby_compat.rb
+  111 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/http-cookie-1.0.2/lib/http/cookie.rb
+  112 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/http-cookie-1.0.2/lib/http-cookie.rb
+  113 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/abstract_response.rb
+  114 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/response.rb
+  115 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/raw_response.rb
+  116 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/resource.rb
+  117 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/payload.rb
+  118 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/2.1/ffi_c.so
+  119 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/platform.rb
+  120 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/types.rb
+  121 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/library.rb
+  122 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/errno.rb
+  123 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/pointer.rb
+  124 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/memorypointer.rb
+  125 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/struct_layout_builder.rb
+  126 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/struct.rb
+  127 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/union.rb
+  128 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/managedstruct.rb
+  129 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/callback.rb
+  130 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/io.rb
+  131 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/autopointer.rb
+  132 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/variadic.rb
+  133 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/enum.rb
+  134 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi/ffi.rb
+  135 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.9-x86-mingw32/lib/ffi.rb
+  136 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows/root_certs.rb
+  137 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient/windows.rb
+  138 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/restclient.rb
+  139 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/rest-client-1.8.0-x86-mingw32/lib/rest-client.rb
+
+[NOTE]
+You may have encountered a bug in the Ruby interpreter or extension libraries.
+Bug reports are welcome.
+For details: http://www.ruby-lang.org/bugreport.html
+
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.

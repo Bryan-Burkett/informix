@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'osgi'
+
+group = 'com.ibm'
+version = '1.0.0'
+
+description = 'IBM Informix Java SQLI'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+	compile 'javax.json:javax.json-api:1.+'
+	compile 'org.glassfish:javax.json:1.+'
+	compile 'javax.servlet:javax.servlet-api:3.+'
+}
+
+tasks.buildNeeded.dependsOn('copyRuntimeLibs');
+task copyRuntimeLibs(type: Copy) {
+	into "WebContent/WEB-INF/lib"
+	from configurations.compile
+}
+tasks.copyRuntimeLibs.dependsOn('runtimeDependencies');
+
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+// Automatically report runtimeDependencies when we compileJava
+tasks.compileJava.dependsOn('runtimeDependencies');
+
+// runtimeDependencies supplies configuration for DependencyReportTask
+task runtimeDependencies(type: DependencyReportTask) {
+	configurations = [project.configurations.runtime]
+	doLast() {
+		println "\n------------------------------------------------------------\n";
+	}
+}

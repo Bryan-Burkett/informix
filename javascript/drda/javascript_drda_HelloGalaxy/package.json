@@ -1,0 +1,27 @@
+{
+	"name": "IBM Informix Node.js DRDA Example",
+	"version": "0.1.0",
+	"description": "IBM Informix Node.js DRDA Example",
+	"main": "javascript_rest_HelloGalaxy.js",
+	"scripts": 
+	{
+		"test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+	},
+
+	"dependencies": 
+	{
+		"ibm_db": "0.0.9"
+	},
+	
+	"repository": "",
+	"keywords": 
+	[
+		"node.js",
+		"eclipse",
+		"nodeclipse"
+	],
+
+	"author": "",
+	"license": "MIT",
+	"readmeFilename": "README.md"
+}

@@ -1,0 +1,16 @@
+Examples for ruby REST.
+
+
+ruby rails new ruby_rails_rest_HelloWorld
+
+in gemfile gem 'rest-client'  if using rest-client, see note below
+bundle install
+rails g controller static_pages home info runTest
+
+For windows system that I tested on, needed to change in app/views/layouts/application.html.erb 'application' in tags to 'default' in order to prevent errors when opening pages on server
+
+All code for test placed in app/helpers/application_helper.rb
+
+On windows machine, using local connection to informix database, rest-client failed due to SSL issues.  The package uses SSL by default
+
+net::http worked well, so used it for testing.  Rest-client should work well on Bluemix

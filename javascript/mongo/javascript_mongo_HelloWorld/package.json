@@ -1,0 +1,15 @@
+{
+  "name": "javascriptmongohelloworld",
+  "version": "0.1.0",
+  "description": "Node_Mongo",
+   "scripts": {
+		"start": "node javascript_mongo_HelloWorld.js"
+	},
+	"dependencies": {
+      "express": "4.12.x",
+      "mongodb" : "~2.0.13",
+      "cfenv" : "1.0.x",
+      "ejs":"~2.3.3"
+  },
+  "repository": {}
+}

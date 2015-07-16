@@ -1,0 +1,16 @@
+Examples for ruby_mongo.
+ruby rails new ruby_rails_mongo_HelloWorld
+
+in gemfile gem'mongo', '~> 2.0'
+bundle install
+rails g controller static_pages home info runTest
+
+For windows system that I tested on, needed to change in app/views/layouts/application.html.erb 'application' in tags to 'default' in order to prevent errors when opening pages on server
+
+All code for test placed in app/helpers/application_helper.rb
+
+Note:  Having issues with following
+		database.collections and database.collection_names and database.list_collections
+		gives: The regular expression /system\.|\$/ is not supported. () 
+
+		This may be issue with client being on Windows.  Running Window 7
